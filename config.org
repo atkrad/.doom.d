@@ -1,14 +1,18 @@
+#+BEGIN_SRC emacs-lisp
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
+#+END_SRC
 
-
+#+BEGIN_SRC emacs-lisp
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Mohammad Abdolirad"
       user-mail-address "m.abdolirad@gmail.com")
+#+END_SRC
 
+#+BEGIN_SRC emacs-lisp
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
 ;;
@@ -20,20 +24,35 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 (setq doom-font (font-spec :family "Inconsolata" :size 15))
+#+END_SRC
 
+#+BEGIN_SRC emacs-lisp
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-solarized-dark)
+#+END_SRC
 
+#+BEGIN_SRC emacs-lisp
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
+#+END_SRC
 
+#+BEGIN_SRC emacs-lisp
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
+#+END_SRC
 
+#+BEGIN_SRC emacs-lisp
+(setq org-support-shift-select t)
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(setq +doom-dashboard-banner-file "emacs.png"
+      +doom-dashboard-banner-dir "~/.doom.d/")
+#+END_SRC
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -51,5 +70,3 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
-
-(setq org-support-shift-select t)
