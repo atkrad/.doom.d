@@ -23,7 +23,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "Inconsolata" :size 15))
+;;(setq doom-font (font-spec :family "Inconsolata" :size 15))
 #+END_SRC
 
 #+BEGIN_SRC emacs-lisp
@@ -54,6 +54,7 @@
       +doom-dashboard-banner-dir "~/.doom.d/")
 #+END_SRC
 
+#+BEGIN_SRC emacs-lisp
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -70,3 +71,4 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+#+END_SRC
