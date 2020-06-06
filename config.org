@@ -72,3 +72,9 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 #+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(after! counsel
+  (setq counsel-rg-base-command
+        "rg -M 240 --hidden --with-filename --no-heading --line-number -g !.git --color never %s"))
+#+END_SRC
