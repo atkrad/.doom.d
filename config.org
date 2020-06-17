@@ -78,3 +78,13 @@
   (setq counsel-rg-base-command
         "rg -M 240 --hidden --with-filename --no-heading --line-number -g !.git --color never %s"))
 #+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+;;There are 3 possible values:
+;;  1) `simple', which highlights only files based on their git status, and is
+;;     slightly faster,
+;;  2) `extended', which highlights both files and directories, but requires
+;;     python,
+;;  3) `deferred', same as extended, but highlights asynchronously.
+(setq +treemacs-use-git-mode 'deferred)
+#+END_SRC
