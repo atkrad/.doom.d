@@ -88,3 +88,12 @@
 ;;  3) `deferred', same as extended, but highlights asynchronously.
 (setq +treemacs-use-git-mode 'deferred)
 #+END_SRC
+
+By default, changes are highlighted *linewise* for all but the selected hunk. This
+has [[https://magit.vc/manual/magit/Performance.html][performance reasons]]. You can enable character-wise highlights for all
+visible hunks with:
+
+#+BEGIN_SRC emacs-lisp
+(after! magit
+  (setq magit-diff-refine-hunk 'all))
+#+END_SRC
